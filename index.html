@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Glass Calendar</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+<div class="topbar">
+
+<button id="prevBtn">◀</button>
+
+<h1 id="monthTitle"></h1>
+
+<button id="nextBtn">▶</button>
+
+<button id="monthView">Месяц</button>
+<button id="weekView">Неделя</button>
+
+<button id="themeToggle">
+🌙
+</button>
+
+<input
+type="text"
+id="searchInput"
+placeholder="Поиск события..."
+>
+
+<input
+type="file"
+id="importFile"
+accept=".json,.csv"
+>
+
+</div>
+
+<div id="calendar"></div>
+
+<div class="chart-box">
+<canvas id="statsChart"></canvas>
+</div>
+
+</div>
+
+<div id="eventModal" class="modal">
+
+<div class="modal-content">
+
+<input id="eventTitle" placeholder="Название">
+
+<textarea
+id="eventDescription"
+placeholder="Описание"
+></textarea>
+
+<button id="saveEvent">
+Сохранить
+</button>
+
+<button id="deleteEvent">
+Удалить
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
